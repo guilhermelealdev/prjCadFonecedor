@@ -11,7 +11,7 @@ import com.guilhermef.prjCadFonecedor.repositories.FonecedorRepository;
 @Service
 public class FornecedorService {
 	
-	private final FonecedorRepository  fonecedorRepository;
+	private final FonecedorRepository fonecedorRepository;
 	
 	@Autowired
 	public FornecedorService(FonecedorRepository  fonecedorRepository) {
