@@ -43,7 +43,7 @@ public class FonecedorController {
 
 	@DeleteMapping("/{id}")
 	public void DeleteFornecedor(@PathVariable Long id) {
-
+		fornecedorService.Deletar(id);
 	}
 
 	@PutMapping("/{id}")
