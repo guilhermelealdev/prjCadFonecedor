@@ -56,4 +56,34 @@ public class FonecedorController {
 		}
 	}
 
+	@GetMapping("/{inscricaoEstadual}")
+	public List<Fornecedor> BuscarPorInscricaoEstadual(@PathVariable String inscricaoEstadual) {
+		return fornecedorService.encontrarPorInscricaoEstadual(inscricaoEstadual);
+	}
+
+	@GetMapping("/{telefone}")
+	public List<Fornecedor> BuscarPorTelefone(@PathVariable String telefone) {
+		return fornecedorService.encontrarPorTelefone(telefone);
+	}
+
+	@GetMapping("/{endereco}")
+	public List<Fornecedor> BuscarPorEndereco(@PathVariable String endereco) {
+		return fornecedorService.encontrarPorEndereco(endereco);
+	}
+
+	@GetMapping("/{razaoSocial}")
+	public List<Fornecedor> BuscarPorRazaoSocial(@PathVariable String razaoSocial) {
+		return fornecedorService.encontrarPorRazaoSocial(razaoSocial);
+	}
+
+	@GetMapping("/{nomeFantasia}")
+	public List<Fornecedor> BuscarPorNomeFantasia(@PathVariable String nomeFantasia) {
+		return fornecedorService.encontrarPorNomeFantasia(nomeFantasia);
+	}
+
+	@GetMapping("/{cnpj}")
+	public List<Fornecedor> BuscarPorCnpj(@PathVariable String cnpj) {
+		return fornecedorService.encontrarPorCnpj(cnpj);
+	}
+
 }
