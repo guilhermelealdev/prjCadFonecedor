@@ -35,6 +35,30 @@ public class FornecedorService {
 		return fonecedorRepository.findById(id).orElse(null);
 	}
 
+	public List<Fornecedor> encontrarPorRazaoSocial(String razaoSocial) {
+		return fonecedorRepository.encontrarPorRazaoSocial(razaoSocial);
+	}
+
+	public List<Fornecedor> encontrarPorNomeFantasia(String nomeFantasia){
+		return fonecedorRepository.encontrarPorRazaoSocial(nomeFantasia);
+	}
+
+	public List<Fornecedor> encontrarPorCnpj(String cnpj){
+		return fonecedorRepository.encontrarPorRazaoSocial(cnpj);
+	}
+
+	public List<Fornecedor> encontrarPorEndereco(String endereco){
+		return fonecedorRepository.encontrarPorRazaoSocial(endereco);
+	}
+
+	public List<Fornecedor> encontrarPorTelefone(String telefone){
+		return fonecedorRepository.encontrarPorRazaoSocial(telefone);
+	}
+
+	public List<Fornecedor> encontrarPorInscricaoEstadual(String inscricaoEstadual){
+		return fonecedorRepository.encontrarPorRazaoSocial(inscricaoEstadual);
+	}
+
 	public Fornecedor updateFornecedor(Long id, Fornecedor fornecedorAtualizado) {
 		// produto a ser procurado pelo id
 		Optional<Fornecedor> fornecedorOptional = fonecedorRepository.findById(id);
@@ -53,5 +77,6 @@ public class FornecedorService {
 		} else {
 			return null;
 		}
+
 	}
 }
